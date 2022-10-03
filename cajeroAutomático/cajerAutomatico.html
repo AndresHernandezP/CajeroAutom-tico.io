@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script></script>
+    <link rel="stylesheet" href="cajeroAutomatico.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img class="banco" src="./assets/Captura de Pantalla 2022-09-15 a la(s) 19.43.06.png" alt="Imagen del banco">
+        <h2>Banco Nacional <br> De Alderlush</h2>
+        <h1>ATM</h1>
+    </header>
+
+
+    <!--     PÁGINA PRINCIPAL -->
+
+    <article id="cuentas">
+
+        <div class="cuentasDerecha">
+
+            <button onclick="apretarBoton(); displayMali()">Mali</button>
+            <button onclick="apretarBoton(); displayGera()">Gera</button>
+            <button onclick="apretarBoton(); displayMaui()">Maui</button>
+        </div>
+
+        <div class="cuentasIzquierda">
+            <button onclick="apretarBoton(); displayJonathan()">Jonathan</button>
+            <button onclick="apretarBoton(); displayAmador()">Amador</button>
+            <button onclick="apretarBoton(); displayGustavo()">Gustavo</button>
+        </div>
+
+    </article>
+
+    <div class="botonesDeRegreso">
+
+        <div id="botonRegresoMali">
+            <button onclick="regresoMali()" style="width:200px;">Regresar</button>
+        </div>
+
+        <div id="botonRegresoGera">
+            <button onclick="regresoGera()" style="width:200px;">Regresa</button>
+        </div>
+
+        <div id="botonRegresoMaui">
+            <button onclick="regresoMaui()" style="width:200px;">Regresa</button>
+        </div>
+
+        <div id="botonRegresoJonathan">
+            <button onclick="regresoJonathan()" style="width:200px;">Regresa</button>
+        </div>
+
+        <div id="botonRegresoAmador">
+            <button onclick="regresoAmador()" style="width:200px;">Regresa</button>
+        </div>
+
+        <div id="botonRegresoGustavo">
+            <button onclick="regresoGustavo()" style="width:200px;">Regresa</button>
+        </div>
+    </div>
+
+
+
+
+    <div id="movimientosMali">
+
+
+        <button onclick="consultarSaldoMali()" id="consultarSaldo" style="background-color: red;">Consultar
+            saldo</button>
+        <button onclick="ingresarMontoMali()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoMali()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+    <div id="movimientosGera">
+
+
+        <button onclick="consultarSaldoGera()" id="consultarSaldo">Consultar saldo</button>
+        <button onclick="ingresarMontoGera()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoGera()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+    <div id="movimientosMaui">
+
+
+        <button onclick="consultarSaldoMaui()" id="consultarSaldo">Consultar saldo</button>
+        <button onclick="ingresarMontoMaui()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoMaui()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+    <div id="movimientosJonathan">
+
+
+        <button onclick="consultarSaldoJonathan()" id="consultarSaldo">Consultar saldo</button>
+        <button onclick="ingresarMontoJonathan()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoJonathan()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+    <div id="movimientosGustavo">
+
+
+        <button onclick="consultarSaldoGustavo()" id="consultarSaldo">Consultar saldo</button>
+        <button onclick="ingresarMontoGustavo()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoGustavo()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+    <div id="movimientosAmador">
+
+
+        <button onclick="consultarSaldoAmador()" id="consultarSaldo">Consultar saldo</button>
+        <button onclick="ingresarMontoAmador()" id="ingresaMonto">Ingresar monto</button>
+        <button onclick="retirarMontoAmador()" id="retirarMonto">Retirar monto</button>
+        <button onclick="window.location.reload()" id="retirarMonto">Cancelar</button>
+    </div>
+
+
+
+    <div id="buenDia">
+        <h2 style="color: white;"> Hola!. Que tenga un buen dia.</h2>
+    </div>
+
+    <div id="dosOportunidades">
+        <h2 style="color: white;">Tiene 2 oportunidades</h2>
+    </div>
+
+    <div id="unaOportunidad">
+        <h2 style="color: white;"> Tiene una oportunidad</h2>
+    </div>
+
+    <div id="demasiadosIntentos">
+        <h2 style="color: white;">Se han realizado demasiados intentos</h2>
+    </div>
+
+    <div id="contacte">
+        <h2 style="margin-left: 300px; text-align: center; width: 100%;color: white;">Contacte con uno de nuestros
+            asesores.</h2>
+
+    </div>
+
+    <div id="queDesea">
+
+        <h2 style="color: white"> Que desea hacer?</h2>
+    </div>
+
+    <!--  Primer página de contraseñas -->
+
+
+
+
+    <div class="contraseña" id="contraseñaMali">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="maliInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMali()">Validar</button>
+    </div>
+
+    <div class="contraseña" id="contraseñaGera">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="geraInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGera()">Validar</button>
+    </div>
+
+    <div class="contraseña" id="contraseñaMaui">
+        <label for="">Intento 1</label>
+        <input type="password" maxlength="4" id="mauiInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMaui()">Validar</button>
+    </div>
+
+    <div class="contraseña" id="contraseñaJonathan">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="jonathanInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaJonathan()">Validar</button>
+    </div>
+
+    <div class="contraseña" id="contraseñaAmador">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="amadorInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaAmador()">Validar</button>
+    </div>
+
+    <div class="contraseña" id="contraseñaGustavo">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="gustavoInput">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGustavo()">Validar</button>
+    </div>
+
+
+    <!-- Segunda página de contraseñas -->
+
+
+    <div class="contraseña2" id="contraseñaMali2">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="maliInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMali2()">Validar</button>
+    </div>
+
+    <div class="contraseña2" id="contraseñaGera2">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="geraInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGera2()">Validar</button>
+    </div>
+
+    <div class="contraseña2" id="contraseñaMaui2">
+        <label for="">Intento 2</label>
+        <input type="password" maxlength="4" id="mauiInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMaui2()">Validar</button>
+    </div>
+
+    <div class="contraseña2" id="contraseñaJonathan2">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="jonathanInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaJonathan2()">Validar</button>
+    </div>
+
+    <div class="contraseña2" id="contraseñaAmador2">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="amadorInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaAmador2()">Validar</button>
+    </div>
+
+    <div class="contraseña2" id="contraseñaGustavo2">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="gustavoInput2">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGustavo2()">Validar</button>
+    </div>
+
+
+    <!-- Tercer pagina de contraseñas -->
+
+
+    <div class="contraseña3" id="contraseñaMali3">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="maliInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMali3()">Validar</button>
+    </div>
+
+    <div class="contraseña3" id="contraseñaGera3">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="geraInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGera3()">Validar</button>
+    </div>
+
+    <div class="contraseña3" id="contraseñaMaui3">
+        <label for="">Intento 3</label>
+        <input type="password" maxlength="4" id="mauiInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaMaui3()">Validar</button>
+    </div>
+
+    <div class="contraseña3" id="contraseñaJonathan3">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="jonathanInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaJonathan3()">Validar</button>
+    </div>
+
+    <div class="contraseña3" id="contraseñaAmador3">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="amadorInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaAmador3()">Validar</button>
+    </div>
+
+    <div class="contraseña3" id="contraseñaGustavo3">
+        <label for="">Ingresa contraseña</label>
+        <input type="password" maxlength="4" id="gustavoInput3">
+        <button onclick="window.location.reload()">Regresa</button>
+        <button onclick="validarContraseñaGustavo3()">Validar</button>
+    </div>
+
+
+
+    <!-- retiros -->
+    
+
+
+
+    <div id="retirosMali">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="retiroMali">
+        <button onclick="regresoMali()" style="width:200px;">Regresar</button>
+        <button onclick="retirarMali()">Retirar</button>
+    </div>
+
+    <div id="retirosGera">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="retiroGera">
+        <button onclick="regresoGera()" style="width:200px;">Regresar</button>
+        <button onclick="retirarGera()">Retirar</button>
+    </div>
+
+    <div id="retirosMaui">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="retiroMaui">
+        <button onclick="regresoMaui()" style="width:200px;">Regresar</button>
+        <button onclick="retirarMaui()">Retirar</button>
+    </div>
+
+    <div id="retirosJonathan">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="retiroJonathan">
+        <button onclick="regresoJonathan()" style="width:200px;">Regresar</button>
+        <button onclick="retirarJonathan()">Retirar</button>
+    </div>
+
+    <div id="retirosAmador">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="retiroAmador">
+        <button onclick="regresoAmador()" style="width:200px;">Regresar</button>
+        <button onclick="retirarAmador()">Retirar</button>
+    </div>
+
+    <div id="retirosGustavo">
+        <label for="">cuanto desea retirar es este </label>
+        <input type="number" max="980" min="1" value="1" id="retiroGustavo">
+        <button onclick="regresoGustavo()" style="width:200px;">Regresar</button>
+        <button onclick="retirarGustavo()">Retirar</button>
+    </div>
+
+   
+   
+  <!-- ingresos -->
+    
+    <div id="ingresosMali">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoMali">
+        <button onclick="regresoMali()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarMali()">Ingresar</button>
+    </div>
+
+    <div id="ingresosGera">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoGera">
+        <button onclick="regresoGera()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarGera()">Ingresar</button>
+    </div>
+
+    <div id="ingresosMaui">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoMaui">
+        <button onclick="regresoMaui()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarMaui()">Ingresar</button>
+    </div>
+
+    <div id="ingresosJonathan">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoJonathan">
+        <button onclick="regresoJonathan()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarJonathan()">Ingresar</button>
+    </div>
+
+    <div id="ingresosAmador">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoAmador">
+        <button onclick="regresoAmador()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarAmador()">Ingresar</button>
+    </div>
+
+    <div id="ingresosGustavo">
+        <label for="">cuanto desea retirar</label>
+        <input type="number" max="980" min="1" value="1" id="ingresoGustavo">
+        <button onclick="regresoGustavo()" style="width:200px;">Regresar</button>
+        <button onclick="ingresarGustavo()">Ingresar</button>
+    </div>
+
+    <script src="cajeroAutomatico.js"></script>
+</body>
+
+</html>
