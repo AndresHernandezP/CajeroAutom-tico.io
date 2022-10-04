@@ -35,7 +35,7 @@
 
     <div class="container d-flex flex-row mt-5" id="formulario">
 
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" id="select" aria-label="Default select example">
             <option selected>Selecciona tu usuario</option>
             <option value="0" id="Mali">Mali</option>
             <option value="1" id="Gera">Gera</option>
@@ -43,6 +43,7 @@
             <option value="3" id="Amador">Amador</option>
             <option value="4" id="Gerardo">Gerardo</option>
             <option value="5" id="Judy">Judy</option>
+            <option id="ninguno">Ninguno de los anteriores</option>
           
         </select>
 
@@ -55,6 +56,21 @@
         <button type="button"  class="validar btn btn-primary ms-3" style="height: 35px;">validar</button>
 
     </div>
+
+<!-- Nuevo usuario-->
+
+<div class="col-6" id="nuevoUsuario" style="display: none; flex-direction: column; margin-top: 100px; margin-left: 100px;">
+    
+ 
+    <input type="text" id="newUser" placeholder="Como te llamas?" >
+
+    <input type="number" id="newFounds" placeholder="Ingresa monto de 10 a 990" value="10" min="10" max="990" style="margin-top: 20px;">
+    <input type="text" pattern="[0-9]+" id="newPassword" placeholder="Crea una contraseña?" style="margin-top: 20px;">
+    <button type="button" class="create btn btn-primary" style="margin-top: 20px;">Crear Nuevo Usuario</button>
+   
+
+</div>
+
 
 <!-- Movimientos -->
 
@@ -79,7 +95,7 @@
 <!-- Ingresar fondos -->
 
 <div class="col" id="addup" style="display:none;">
-    <label for="addFounds">Cuanto deseas ingresar?</label>
+<label for="addFounds">Cuanto deseas ingresar?</label>
 <input type="number" id="addFounds" onclick="" width="30%" max="990" min="1" >
 <button type="button" class="btn btn-primary" onclick= "addFounds()" style="margin-left: 50px;"> Ingresar</button>
 </div>
